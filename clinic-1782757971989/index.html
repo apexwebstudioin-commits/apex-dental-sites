@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Top Rated Dentist in Kota | Dr. Tooth Fairy</title>
+    <meta name="description" content="Expert dental implants, root canal treatment, and smile makeovers in Kota. Affordable cost, painless laser tech. Book an appointment today.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Yeseva+One&family=Outfit:wght@100;200;300;400;500;600;700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-cream: #F5F1EA;
+            --text-dark: #111111;
+            --text-light: #555555; 
+            --gold: #D4AF37;
+            --font-outfit: 'Outfit', sans-serif; 
+            --font-geneve: 'Playfair Display', serif; 
+            --font-toronto: 'Yeseva One', display; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-outfit); }
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        body { background: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; margin: 0; }
+
+        /* 🔥 Desktop/Mobile Visibility Utilities 🔥 */
+        .mobile-only { display: none; }
+
+        /* 🔥 NEW 3D SVG PRELOADER 🔥 */
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 9999; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+        .preloader-half { position: absolute; width: 100%; height: 50vh; background: #111111; z-index: 1; }
+        .preloader-top { top: 0; }
+        .preloader-bottom { bottom: 0; }
+        .preloader-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .dental-loader svg { width: 90px; height: 90px; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)); }
+        .tooth-draw { stroke-dasharray: 120; stroke-dashoffset: 120; animation: drawTooth 1.8s ease-in-out infinite alternate; }
+        .tooth-line { stroke-dasharray: 30; stroke-dashoffset: 30; animation: drawTooth 1.8s ease-in-out infinite alternate 0.4s; }
+        @keyframes drawTooth { to { stroke-dashoffset: 0; } }
+        .preloader-text-wrapper { position: relative; overflow: hidden; }
+        .preloader-text { font-family: var(--font-geneve); font-size: 3rem; color: var(--gold); letter-spacing: 2px; font-weight: 500; transform: translateY(100%); text-align: center; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        /* 🔥 SPLASH CURSOR CANVAS 🔥 */
+        #splash-canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9998; }
+
+        /* NAVBAR (DESKTOP) */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; z-index: 100; position: fixed; width: 100%; top: 0; transition: 0.3s; }
+        .logo { font-family: var(--font-toronto); font-size: 1.8rem; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; color: var(--text-dark); }
+        .logo span { background: var(--text-dark); color: var(--bg-cream); padding: 2px 8px; border-radius: 6px; font-size: 1.2rem; font-family: var(--font-toronto); }
+        .nav-links { display: flex; gap: 40px; font-size: 0.95rem; }
+        .nav-links div { cursor: pointer; transition: 0.3s; font-weight: 500;}
+        .nav-links div:hover { color: var(--gold); }
+        .nav-actions { display: flex; align-items: center; gap: 15px; }
+        .login-btn { background: var(--text-dark); color: #fff; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-size: 0.9rem; transition: 0.3s; font-weight: 600; white-space: nowrap;}
+        .login-btn:hover { background: var(--gold); color: #111; }
+        .hamburger { display: none; }
+
+        /* HERO SECTION (DESKTOP) */
+        .hero-fixed-container { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; background: radial-gradient(circle at 50% 50%, #ffffff 0%, var(--bg-cream) 100%); display: flex; justify-content: space-between; align-items: center; padding: 0 5%; }
+        .hero-canvas { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5.5); width: 200px; height: 200px; z-index: 10; pointer-events: none; }
+        .hero-tooth, .hero-screw { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; will-change: transform; }
+        .hero-tooth { z-index: 2; filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.2)); }
+        .hero-screw { z-index: 1; filter: drop-shadow(0px 8px 10px rgba(0,0,0,0.15)); }
+
+        .bg-watermark { position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 18vw; font-family: var(--font-geneve); font-weight: 600; color: rgba(17, 17, 17, 0.03); pointer-events: none; letter-spacing: -2px; line-height: 0.8; z-index: 1; white-space: nowrap;}
+        
+        .left-content { width: 40%; z-index: 4; position: relative;}
+        .trust-badge { display: inline-block; background: rgba(255,255,255,0.6); padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; margin-bottom: 25px; border: 1px solid rgba(0,0,0,0.05); color: var(--gold); font-weight: 600;}
+        .left-content h1 { font-family: var(--font-geneve); font-size: 5rem; font-weight: 500; line-height: 1.05; margin-bottom: 20px; letter-spacing: -1px; }
+        .left-content p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px; line-height: 1.6; max-width: 400px; }
+        
+        .cta-group { display: flex; gap: 15px; align-items: center; }
+        .cta-btn { background: var(--text-dark); color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; transition: 0.3s;} 
+        .cta-btn:hover { background: var(--gold); color: #111; }
+        .cta-outline { background: transparent; color: var(--text-dark); border: 1px solid rgba(0,0,0,0.2); }
+        .cta-outline:hover { border-color: var(--text-dark); background: transparent; }
+
+        .right-content { width: 35%; text-align: right; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; z-index: 4; position: relative;}
+        .h1-visual { font-family: var(--font-geneve); font-size: 5.5rem; font-weight: 500; line-height: 1.05; margin-bottom: 50px; letter-spacing: -1px; color: var(--text-dark);}
+        .h1-visual span { color: var(--gold); font-style: italic; font-weight: 400; }
+        
+        .stats-grid { display: flex; flex-direction: column; gap: 30px; text-align: right; }
+        .stat h3 { font-family: var(--font-toronto); font-size: 3rem; font-weight: 400; margin-bottom: 5px; color: var(--text-dark); }
+        .stat p { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;}
+
+        /* SERVICES STACK (DESKTOP) */
+        .cards-stack-wrapper { position: relative; margin-top: 100vh; width: 100%; z-index: 10; background: var(--bg-cream); }
+        .sticky-panel { position: sticky; top: 0; width: 100%; height: 100vh; display: flex; border-top-left-radius: 40px; border-top-right-radius: 40px; box-shadow: 0 -30px 60px rgba(0,0,0,0.05); overflow: hidden; will-change: transform, filter, opacity; }
+        
+        .panel-1 { background: #ffffff; z-index: 11; }
+        
+        .panel-2-wrapper { height: 250vh; background: var(--bg-cream); position: relative; z-index: 12; border-top-left-radius: 40px; border-top-right-radius: 40px; box-shadow: 0 -30px 60px rgba(0,0,0,0.05); }
+        .panel-2 { background: var(--bg-cream); border-radius: 0; box-shadow: none; z-index: 12; } 
+        
+        .panel-3-wrapper { height: 150vh; background: #ffffff; position: relative; z-index: 13; border-top-left-radius: 40px; border-top-right-radius: 40px; }
+        .panel-3 { background: #ffffff; border-radius: 0; box-shadow: none; z-index: 13; }
+
+        .slide-left { width: 50%; height: 100%; display: flex; align-items: center; padding-left: 8%; position: relative; border-right: 1px solid rgba(0,0,0,0.05); z-index: 5;}
+        .bg-num { position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-family: var(--font-geneve); font-size: 28vw; font-weight: 500; color: rgba(0, 0, 0, 0.02); line-height: 1; pointer-events: none; z-index: 1; }
+        .slide-text { position: relative; width: 80%; z-index: 10; }
+        .slide-text h4 { font-size: 0.85rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600;}
+        .slide-text h2 { font-family: var(--font-geneve); font-size: 5rem; font-weight: 400; line-height: 1; color: var(--text-dark); margin-bottom: 20px; letter-spacing: -2px; }
+        .slide-text h2 i { color: #888; font-style: italic; font-weight: 300; }
+        .divider-line { width: 80px; height: 2px; background: var(--gold); margin-bottom: 30px; }
+        .slide-text p { color: var(--text-light); font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px; font-weight: 300; max-width: 450px;}
+        
+        .ai-overview-tags { display: flex; gap: 10px; flex-wrap: wrap; max-width: 450px;}
+        .ai-tag { background: rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); padding: 6px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: 600; color: var(--text-dark); display: flex; align-items: center; gap: 6px;}
+        .ai-tag i { color: var(--gold); font-style: normal;}
+
+        .slide-right { width: 50%; height: 100%; position: relative; display: flex; align-items: center; justify-content: center; z-index: 5; }
+        .museum-glow { position: absolute; width: 80%; height: 80%; background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%); border-radius: 50%; z-index: 1; }
+        .anim-canvas { position: relative; width: 90vh; height: 90vh; display: flex; align-items: center; justify-content: center; z-index: 2; }
+        .anim-part { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.1)); }
+        #service2-canvas { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.15)); }
+
+        /* CONTENT FLOW WRAPPER */
+        .content-flow-wrapper { position: relative; z-index: 15; background: var(--bg-cream); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h4 { font-size: 0.85rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;}
+        .section-header h2 { font-family: var(--font-geneve); font-size: 4rem; font-weight: 400; color: var(--text-dark); letter-spacing: -1px; }
+
+        /* 🔥 BEFORE & AFTER SECTION WITH SLIDER 🔥 */
+        .before-after-section { background: var(--bg-cream); padding: 120px 5%; display: flex; flex-direction: column; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .ba-container { position: relative; width: 100%; max-width: 1000px; height: 60vh; min-height: 500px; border-radius: 20px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.05); cursor: ew-resize; }
+        .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .ba-before-wrapper { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; z-index: 2; }
+        .ba-before-wrapper img { width: 1000px; height: 100%; max-width: none; object-fit: cover; }
+        .ba-slider-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: var(--gold); z-index: 3; transform: translateX(-50%); pointer-events: none; }
+        .ba-slider-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: var(--gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 10px 20px rgba(0,0,0,0.2); color: #fff; font-weight: bold; }
+        .ba-label { position: absolute; top: 20px; background: rgba(17,17,17,0.8); color: var(--gold); padding: 8px 16px; border-radius: 50px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; z-index: 4; pointer-events: none; font-weight: 600;}
+        .label-before { left: 20px; }
+        .label-after { right: 20px; }
+
+        /* 🔥 WEBGL CLINIC GALLERY SECTION 🔥 */
+        .clinic-section { background: #111111; padding: 120px 0; overflow: hidden; position: relative; }
+        .clinic-header h4 { color: var(--gold); }
+        .clinic-header h2 { color: #ffffff; }
+        .circular-gallery { width: 100%; height: 70vh; min-height: 500px; overflow: hidden; cursor: grab; outline: none; position: relative; }
+        .circular-gallery:active { cursor: grabbing; }
+        #error-msg { color: #ff4444; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-family: var(--font-outfit); z-index: 100; display: none; background: rgba(0,0,0,0.8); padding: 10px 20px; border-radius: 8px; }
+
+        /* PREMIUM TECH SECTION */
+        .tech-section { padding: 120px 5%; background: #1a1a1a; position: relative; overflow: hidden; }
+        .tech-section .section-header h2 { color: #fff; }
+        .tech-bg-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%); z-index: 1; pointer-events: none;}
+        .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; perspective: 1000px; position: relative; z-index: 2; }
+        .tech-card { background: rgba(255, 255, 255, 0.03); padding: 60px 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); text-align: center; transform-style: preserve-3d; cursor: crosshair; transition: border 0.3s;}
+        .tech-card:hover { border-color: var(--gold); }
+        .tech-icon-wrapper { width: 90px; height: 90px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; border: 1px solid rgba(212, 175, 55, 0.3); transform: translateZ(60px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .tech-icon-wrapper svg { width: 40px; height: 40px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
+        .tech-card h3 { font-family: var(--font-geneve); font-size: 2rem; margin-bottom: 15px; color: #fff; transform: translateZ(40px); }
+        .tech-card p { font-size: 1rem; color: #aaa; line-height: 1.7; transform: translateZ(20px); }
+
+        /* MEET THE MASTER */
+        .master-section { background: #ffffff; padding: 120px 5%; display: flex; align-items: center; justify-content: center; gap: 80px; }
+        .master-left { width: 40%; max-width: 500px; position: relative;}
+        .master-img { width: 100%; border-radius: 20px; box-shadow: 0 40px 80px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 4/5; }
+        .doc-badges { position: absolute; bottom: -20px; left: -20px; background: #111; padding: 20px; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);}
+        .doc-badges span { display: block; color: var(--gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-weight: 600;}
+        .doc-badges span:last-child { margin-bottom: 0; color: #fff;}
+        .master-right { width: 45%; max-width: 600px; }
+        .master-right h4 { font-size: 0.85rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600;}
+        .master-right h2 { font-family: var(--font-geneve); font-size: 4.5rem; line-height: 1; color: var(--text-dark); margin-bottom: 20px; letter-spacing: -2px; }
+        .doc-qualifications { font-size: 1rem; color: var(--text-dark); font-weight: 600; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);}
+        .doc-qualifications i { color: var(--text-light); font-weight: 400; font-style: normal; margin-left: 10px;}
+        .master-right p { font-size: 1.1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 30px; }
+        .doc-signature { font-family: var(--font-geneve); font-size: 2.5rem; font-style: italic; color: var(--gold); }
+
+        /* AUTHENTIC REVIEWS SECTION */
+        .review-section { padding: 120px 0; background: var(--bg-cream); overflow: hidden; position: relative; border-top: 1px solid rgba(0,0,0,0.05);}
+        .review-section::before, .review-section::after { content: ''; position: absolute; top: 0; width: 15%; height: 100%; z-index: 5; pointer-events: none; }
+        .review-section::before { left: 0; background: linear-gradient(to right, var(--bg-cream) 0%, transparent 100%); }
+        .review-section::after { right: 0; background: linear-gradient(to left, var(--bg-cream) 0%, transparent 100%); }
+        .gbp-badge { background: #fff; border: 1px solid rgba(0,0,0,0.05); padding: 10px 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.02);}
+        .gbp-badge span { font-weight: 600; color: #111; }
+        .gbp-badge img { width: 20px; }
+        .review-track-container { width: 100%; overflow: hidden; display: flex; }
+        .review-track { display: flex; gap: 40px; padding: 40px 0; animation: scrollReviews 40s linear infinite; width: max-content; }
+        .review-track:hover { animation-play-state: paused; }
+        @keyframes scrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .review-card { width: 450px; flex-shrink: 0; background: #fff; padding: 50px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.03); position: relative; transition: 0.4s ease; }
+        .review-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-color: var(--gold); } 
+        .quote-mark { position: absolute; top: 30px; right: 40px; font-family: var(--font-geneve); font-size: 8rem; color: rgba(212, 175, 55, 0.1); line-height: 1; pointer-events: none; }
+        .stars { color: var(--gold); font-size: 1.2rem; margin-bottom: 25px; letter-spacing: 2px;}
+        .review-text { font-size: 1.15rem; line-height: 1.7; color: var(--text-light); font-style: italic; margin-bottom: 40px; position: relative; z-index: 2;}
+        .patient-info { display: flex; align-items: center; gap: 20px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 25px;}
+        .patient-avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--bg-cream); display: flex; align-items: center; justify-content: center; font-family: var(--font-geneve); font-weight: 600; font-size: 1.4rem; color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);}
+        .patient-details h5 { font-family: var(--font-outfit); font-size: 1.1rem; font-weight: 600; color: #111; margin-bottom: 4px;}
+        .patient-details span { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* TREATMENT SUMMARY BLOCK */
+        .ai-summary-section { background: #ffffff; padding: 100px 5% 0 5%; border-top: 1px solid rgba(0,0,0,0.05); }
+        .ai-summary-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; background: var(--bg-cream); padding: 40px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.02);}
+        .ai-block { text-align: center; border-right: 1px solid rgba(0,0,0,0.1); padding: 0 10px;}
+        .ai-block:last-child { border-right: none; }
+        .ai-block h5 { font-size: 0.85rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: 600;}
+        .ai-block p { font-family: var(--font-geneve); font-size: 1.5rem; color: var(--text-dark); line-height: 1.2;}
+
+        /* FAQ SECTION */
+        .faq-section { background: #ffffff; padding: 100px 5% 120px 5%; }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid rgba(0,0,0,0.1); padding: 30px 0; cursor: pointer; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-geneve); font-size: 1.5rem; color: var(--text-dark); transition: color 0.3s;}
+        .faq-item:hover .faq-question { color: var(--gold); }
+        .faq-icon { font-size: 1.5rem; font-weight: 300; transition: transform 0.3s; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--text-light); font-size: 1.1rem; line-height: 1.6; }
+        .faq-answer p { padding-top: 20px; }
+        .faq-item.active .faq-answer { max-height: 200px; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+        /* WOW SECTION */
+        .wow-section { padding: 120px 5%; background: #ffffff; display: flex; align-items: center; justify-content: center; gap: 60px;}
+        .wow-left { width: 50%; max-width: 600px; border-radius: 20px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+        .wow-right { width: 50%; max-width: 500px; }
+        .wow-header { margin-bottom: 40px; }
+        .wow-header h4 { font-size: 0.85rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; font-weight: 600; }
+        .wow-header h2 { font-family: var(--font-geneve); font-size: 4rem; font-weight: 400; color: #111; letter-spacing: -1px; line-height: 1.1; }
+        
+        .wow-steps-wrapper { display: flex; flex-direction: column; gap: 40px; width: 100%; }
+        .wow-step { width: 100%; position: relative; }
+        .wow-step h3 { font-family: var(--font-geneve); font-size: 2rem; color: var(--text-dark); margin-bottom: 10px; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+        .wow-step p { font-size: 1.1rem; color: var(--text-light); line-height: 1.6; }
+
+        /* PROGRAMMATIC FOOTER */
+        .premium-footer { background: #111111; color: #fff; padding-top: 100px; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden;}
+        .footer-bg-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%); top: 0; left: 50%; transform: translateX(-50%); border-radius: 50%; pointer-events: none;}
+        .premium-footer h2 { font-family: var(--font-geneve); font-size: 7vw; font-weight: 400; text-align: center; line-height: 1; margin-bottom: 60px; z-index: 2; position: relative; }
+        .premium-footer h2 i { color: var(--gold); font-weight: 300; }
+        
+        .magnetic-wrapper { padding: 40px; border-radius: 50%; z-index: 5; margin-bottom: 50px;}
+        .magnetic-btn { width: 180px; height: 180px; background: var(--gold); color: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; text-align: center; transition: background 0.3s; box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);}
+        .magnetic-btn:hover { background: #fff; color: #111; } 
+        
+        .seo-footer-grid { width: 90%; max-width: 1200px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1); z-index: 5; position: relative;}
+        .seo-col h4 { font-family: var(--font-outfit); font-size: 1.2rem; color: #fff; margin-bottom: 20px; font-weight: 500;}
+        .seo-col ul { list-style: none; }
+        .seo-col ul li { margin-bottom: 12px; }
+        .seo-col ul li a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
+        .seo-col ul li a:hover { color: var(--gold); }
+        .map-container { width: 100%; height: 200px; background: #222; border-radius: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: #555; font-size: 0.9rem;}
+        .footer-bottom { width: 90%; max-width: 1200px; display: flex; justify-content: space-between; font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding: 30px 0; z-index: 5;}
+
+
+        /* 🔥🔥🔥 MOBILE RESPONSIVE QUERIES 🔥🔥🔥 */
+        @media (max-width: 768px) {
+            
+            /* Hide Desktop Elements on Mobile */
+            .desktop-only { display: none !important; }
+            .mobile-only { display: block !important; }
+            
+            /* Navbar Fix */
+            nav { padding: 15px 5%; background: rgba(245, 241, 234, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+            .nav-links { display: none; } 
+            .logo { font-size: 1.3rem; }
+            .login-btn { padding: 8px 16px; font-size: 0.8rem; }
+            .hamburger { display: block; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding-left: 5px; }
+
+            /* 🔥 MOBILE EXCLUSIVE HERO WRAPPER (MINIMAL & FIXED) 🔥 */
+            .mobile-hero-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 100%; padding-top: 100px; z-index: 5; text-align: center; height: 100svh; position: relative; overflow: hidden; }
+            .mobile-badge { color: var(--gold); border: 1px solid var(--gold); background: transparent; border-radius: 50px; padding: 6px 15px; font-size: 0.75rem; margin-bottom: 10px; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+            
+            /* Typography Stack (Cinematic Dentist text) */
+            .mobile-huge-text { font-size: 5.5rem; font-family: var(--font-outfit); font-weight: 800; color: var(--gold); z-index: 1; text-shadow: 0 15px 40px rgba(212,175,55,0.6), 0 0 90px rgba(212,175,55,0.4); line-height: 0.9; letter-spacing: -2px; opacity: 0.85; margin-top: 15px; }
+            
+            /* The Tooth Canvas Position */
+            .hero-fixed-container { flex-direction: column; justify-content: flex-start; }
+            .hero-canvas { transform: translate(-50%, -50%) scale(3.5); opacity: 1; z-index: 10; top: 48%; }
+            
+            /* 🔥 Premium Fade Effect (Screw ko buttons se pehle hi gayab kar diya) 🔥 */
+            .hero-screw { 
+                -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 58%); 
+                mask-image: linear-gradient(to bottom, black 40%, transparent 58%); 
+            }
+            
+            /* CTA Buttons Stack (Buttons ki styling aur bottom par lock) */
+            .mobile-ctas { position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; width: 90%; max-width: 400px; gap: 12px; z-index: 20; }
+            .mobile-cta-black { background: #111; color: #fff; border-radius: 50px; padding: 16px; text-align: center; text-decoration: none; font-weight: 600; font-size: 1.05rem; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: center; align-items: center; gap: 10px; }
+            .mobile-cta-white { background: #fff; color: #111; border-radius: 50px; padding: 16px; text-align: center; text-decoration: none; font-weight: 600; font-size: 1.05rem; box-shadow: 0 5px 20px rgba(0,0,0,0.08); display: flex; justify-content: center; align-items: center; gap: 10px; border: 1px solid rgba(0,0,0,0.05); }
+
+            /* SERVICES SECTION MOBILE */
+            .sticky-panel { flex-direction: column; }
+            .slide-left { width: 100%; height: auto; padding: 40px 5% 10px 5%; text-align: center; border-right: none; justify-content: flex-start; }
+            .slide-text { width: 100%; }
+            .slide-text h2 { font-size: 3rem; margin-bottom: 10px; }
+            .divider-line { margin: 0 auto 15px auto; }
+            .ai-overview-tags { justify-content: center; }
+            .bg-num { font-size: 40vw; top: 15%; left: 50%; transform: translateX(-50%); opacity: 0.05; }
+            .slide-right { width: 100%; height: 50vh; min-height: 400px; }
+            .anim-canvas { width: 100%; height: 100%; }
+            .anim-part { width: 80%; left: 10%; object-fit: contain; }
+
+            .section-header { margin-bottom: 30px; }
+            .section-header h2 { font-size: 2.5rem; }
+            .content-flow-wrapper { padding-top: 20px; }
+
+            /* 🔥 Mobile Static Before/After 🔥 */
+            .mobile-ba-static { width: 90%; max-width: 400px; margin: 0 auto; display: block; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+            
+            /* 🔥 Mobile Swipe Gallery (Horizontal Scroll Snap) 🔥 */
+            .clinic-section { padding: 80px 0; }
+            .mobile-swipe-gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 0 5% 30px 5%; width: 100%; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+            .mobile-swipe-gallery::-webkit-scrollbar { display: none; }
+            .swipe-item { flex: 0 0 85%; scroll-snap-align: center; position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+            .swipe-item img { width: 100%; height: 350px; object-fit: cover; display: block; filter: grayscale(20%); }
+            .swipe-item span { position: absolute; bottom: 20px; left: 20px; color: var(--gold); font-family: var(--font-geneve); font-size: 1.6rem; text-shadow: 0 4px 15px rgba(0,0,0,0.9); font-weight: 500; }
+
+            .tech-grid { grid-template-columns: 1fr; gap: 20px; }
+            .ai-summary-grid { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+            .ai-block { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; }
+            .ai-block:last-child { border-bottom: none; }
+
+            .master-section, .wow-section { flex-direction: column; padding: 60px 5%; text-align: center; gap: 30px; }
+            .wow-section { flex-direction: column-reverse; } 
+            
+            .master-left, .master-right, .wow-left, .wow-right { width: 100%; max-width: 100%; }
+            .master-right h2 { font-size: 3rem; }
+            .doc-badges { position: relative; bottom: 0; left: 0; margin-top: 15px; display: flex; justify-content: space-between; padding: 15px; }
+            .doc-badges span { font-size: 0.75rem; margin-bottom: 0; }
+            
+            .wow-header { margin-bottom: 20px; text-align: center; }
+            .wow-step h3 { font-size: 1.5rem; }
+
+            .premium-footer h2 { font-size: 15vw; }
+            .magnetic-btn { width: 140px; height: 140px; }
+            .seo-footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 20px; }
+            .footer-bottom div { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="preloader-half preloader-top"></div>
+        <div class="preloader-half preloader-bottom"></div>
+        <div class="preloader-content">
+            <div class="dental-loader">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.2">
+                    <path class="tooth-draw" stroke-linecap="round" stroke-linejoin="round" d="M10 21h4c2.206 0 4-1.794 4-4v-2c0-1.103.897-2 2-2h1c.552 0 1-.448 1-1V8c0-3.313-2.687-6-6-6-1.586 0-3.033.62-4.105 1.63A5.963 5.963 0 0 0 8 2C4.687 2 2 4.687 2 8v4c0 .552.448 1 1 1h1c1.103 0 2 .897 2 2v2c0 2.206 1.794 4 4 4z"/>
+                    <path class="tooth-line" stroke-linecap="round" stroke-linejoin="round" d="M12 21v-4"/>
+                </svg>
+            </div>
+            <div class="preloader-text-wrapper">
+                <div class="preloader-text">Crafting Smiles...</div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="splash-canvas"></canvas>
+
+    <nav>
+        <div class="logo"><span>D</span> Dr. Tooth Fairy</div>
+        <div class="nav-links">
+            <div class="active">Home</div>
+            <div>Services</div>
+            <div>Our Doctors</div>
+            <div>Location</div>
+        </div>
+        <div class="nav-actions">
+            <a href="tel:918092275584" class="login-btn">Call Now</a>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="hero-fixed-container">
+        <div class="hero-canvas">
+            <img class="hero-screw" src="https://i.ibb.co/5XJKbp1p/New-Project-2.png" alt="Screw Base" style="transform: translateY(0);">
+            <img class="hero-tooth" src="https://i.ibb.co/v8D4gLV/New-Project-4.png" alt="Tooth Crown" style="transform: translateY(0);">
+        </div>
+        
+        <div class="bg-watermark desktop-only">Dr. Tooth Fairy</div>
+        <div class="left-content desktop-only">
+            <div class="trust-badge">✦ Award Winning Clinic in Kota</div>
+            <h1>Top Rated Dentist<br>in Kota</h1>
+            <p>We combine advanced 3D technology and artistic precision to ensure your smile is crafted to absolute perfection.</p>
+            <div class="cta-group">
+                <a href="#" class="cta-btn">Book Consultation →</a>
+                <a href="https://wa.me/918092275584" class="cta-btn cta-outline">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="right-content desktop-only">
+            <h2 class="h1-visual">& Straight<br><span>Smile</span></h2>
+            <div class="stats-grid">
+                <div class="stat"><h3>5000+</h3><p>Happy<br>Patients</p></div>
+                <div class="stat"><h3>4.9★</h3><p>Google<br>Rating</p></div>
+            </div>
+        </div>
+
+        <div class="mobile-hero-wrapper mobile-only">
+            <div class="mobile-badge">★ Award Winning Clinic in Kota</div>
+            <div class="mobile-huge-text">Dentist</div>
+            
+            <div class="mobile-spacer"></div> 
+            
+            <div class="mobile-ctas">
+                <a href="#" class="mobile-cta-black">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 
+                    Book Consultation →
+                </a>
+                <a href="https://wa.me/918092275584" class="mobile-cta-white">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> 
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div> 
+
+    <div class="cards-stack-wrapper">
+        
+        <div class="sticky-panel panel-1">
+            <div class="slide-left">
+                <div class="bg-num">01</div>
+                <div class="slide-text">
+                    <h4>Service 01</h4>
+                    <h2>Digital<br><i>Crowns.</i></h2>
+                    <div class="divider-line"></div>
+                    <p>Ultra-precise 3D mapped crowns that fit perfectly. Experience a Hollywood-level smile makeover with digital workflows.</p>
+                    <div class="ai-overview-tags">
+                        <div class="ai-tag"><i>⏱</i> Time: 1 Visit</div>
+                        <div class="ai-tag"><i>💰</i> Cost: {{CrownPriceRange}}</div>
+                        <div class="ai-tag"><i>❤️</i> Recovery: Instant</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-right">
+                <div class="museum-glow"></div>
+                <div class="anim-canvas">
+                    <img class="anim-part s1-root" src="https://i.ibb.co/mCShvn4D/New-Project-7.png" alt="Root">
+                    <img class="anim-part s1-cap" src="https://i.ibb.co/Hp38fTYN/New-Project-6.png" alt="Crown Cap" style="transform: translateY(-50%); opacity: 0;">
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel-2-wrapper">
+            <div class="sticky-panel panel-2">
+                <div class="slide-left">
+                    <div class="bg-num">02</div>
+                    <div class="slide-text">
+                        <h4>Service 02</h4>
+                        <h2>Advanced<br><i>Restorations.</i></h2>
+                        <div class="divider-line"></div>
+                        <p>Experience the future of dentistry. Integrating ultra-precise digital mapping for flawless structural integrity and perfect fit.</p>
+                        <div class="ai-overview-tags">
+                            <div class="ai-tag"><i>⏱</i> Time: 2 Visits</div>
+                            <div class="ai-tag"><i>💰</i> Cost: {{RestorationPrice}}</div>
+                            <div class="ai-tag"><i>✨</i> Method: 3D Mapping</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-right">
+                    <div class="museum-glow"></div>
+                    <div class="anim-canvas">
+                        <canvas id="service2-canvas" width="1000" height="1000"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-3-wrapper">
+            <div class="sticky-panel panel-3">
+                <div class="slide-left">
+                    <div class="bg-num">03</div>
+                    <div class="slide-text">
+                        <h4>Service 03</h4>
+                        <h2>Precision<br><i>Implants.</i></h2>
+                        <div class="divider-line"></div>
+                        <p>Permanent, natural-looking aesthetics engineered for lifelong durability. A masterclass in modern dental restoration.</p>
+                        <div class="ai-overview-tags">
+                            <div class="ai-tag"><i>⏱</i> Time: 45 Mins</div>
+                            <div class="ai-tag"><i>❤️</i> Feel: Painless Laser</div>
+                            <div class="ai-tag"><i>⭐</i> Warranty: Lifetime</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-right">
+                    <div class="museum-glow"></div>
+                    <div class="anim-canvas">
+                        <img class="anim-part s3-implant" src="https://i.ibb.co/spPqkgmF/8501a7c795543f6e00df70a918dc429d-removebg-preview.png" alt="Precision Implants">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-flow-wrapper">
+
+        <div class="before-after-section">
+            <div class="section-header">
+                <h4>Transformations</h4>
+                <h2>Life-Changing Smiles.</h2>
+            </div>
+            
+            <div class="ba-container desktop-only" id="baContainer">
+                <img class="ba-img ba-after-img" src="https://i.ibb.co/fYXYzKHz/after-image.jpg" alt="After Smile">
+                <div class="ba-label label-after">After</div>
+                
+                <div class="ba-before-wrapper" id="baWrapper">
+                    <img src="https://i.ibb.co/5Wtbyf7v/But-the-last-dentist-said-they-had-to-break-my-jaw-and-do-Ortho-to-fix-my-crossbite-yeah-well-you.jpg" alt="Before Smile">
+                    <div class="ba-label label-before">Before</div>
+                </div>
+                <div class="ba-slider-handle" id="baHandle">
+                    <div class="ba-slider-btn">↔</div>
+                </div>
+            </div>
+
+            <img src="https://i.ibb.co/4nP6qR6x/before-aftere-image.png" alt="Smile Transformation" class="mobile-only mobile-ba-static">
+        </div>
+
+        <div class="clinic-section">
+            <div class="section-header clinic-header">
+                <h4>The Environment</h4>
+                <h2>Experience true luxury.</h2>
+            </div>
+            <div id="error-msg"></div>
+            
+            <div class="circular-gallery desktop-only" id="gallery" tabindex="0"></div>
+
+            <div class="mobile-only mobile-swipe-gallery">
+                <div class="swipe-item"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000" alt="Lounge"><span>The Lounge</span></div>
+                <div class="swipe-item"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000" alt="Suite"><span>Operating Suite</span></div>
+                <div class="swipe-item"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000" alt="Recovery"><span>Private Recovery</span></div>
+                <div class="swipe-item"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000" alt="Waiting Area"><span>Waiting Area</span></div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <div class="tech-bg-glow"></div>
+            <div class="section-header">
+                <h4>Innovation</h4>
+                <h2>Technology driving precision.</h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>3D CBCT Scans</h3>
+                    <p>Ultra-HD jaw mapping ensures zero errors and precise implant angles for lifelong stability.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Painless Lasers</h3>
+                    <p>Soft-tissue laser therapy for bloodless, pain-free treatments and ultra-fast recovery times.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke-linecap="round"/><path d="M9 9h6M9 15h6" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>In-House Milling</h3>
+                    <p>Get your digital crowns designed, milled, and fitted perfectly within a single clinic visit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="master-section">
+            <div class="master-left">
+                <img class="master-img" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000" alt="Lead Surgeon">
+                <div class="doc-badges">
+                    <span>15+ Years Exp.</span>
+                    <span>5000+ Smiles</span>
+                    <span>Top Rated</span>
+                </div>
+            </div>
+            <div class="master-right">
+                <h4>The Visionary</h4>
+                <h2>Meet<br>Dr. {{DoctorName}}.</h2>
+                
+                <div class="doc-qualifications">
+                    {{DoctorQualifications}} <i>| Reg No: {{DoctorRegNo}}</i>
+                </div>
+
+                <p>With exclusive experience in implantology and digital aesthetic dentistry, our expert surgeon combines medical precision with architectural design to craft the perfect human smile.</p>
+                <div class="doc-signature">Expert Care</div>
+            </div>
+        </div>
+
+        <div class="review-section">
+            <div class="section-header">
+                <h4>Testimonials</h4>
+                <h2>Stories of confident smiles.</h2>
+                <br>
+                <div class="gbp-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+                    <span>4.9 Rating • Based on {{GoogleReviewCount}} Reviews</span>
+                </div>
+            </div>
+            <div class="review-track-container">
+                <div class="review-track">
+                    <div class="review-card">
+                        <div class="quote-mark">"</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">{{ReviewText_1}}</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">G</div>
+                            <div class="patient-details"><h5>{{ReviewerName_1}}</h5><span>Google Review</span></div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="quote-mark">"</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">{{ReviewText_2}}</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">G</div>
+                            <div class="patient-details"><h5>{{ReviewerName_2}}</h5><span>Google Review</span></div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="quote-mark">"</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">{{ReviewText_3}}</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">G</div>
+                            <div class="patient-details"><h5>{{ReviewerName_3}}</h5><span>Google Review</span></div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="quote-mark">"</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">{{ReviewText_1}}</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">G</div>
+                            <div class="patient-details"><h5>{{ReviewerName_1}}</h5><span>Google Review</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-summary-section">
+            <div class="section-header">
+                <h4>Treatment Summary</h4>
+                <h2>Treatment at a Glance.</h2>
+            </div>
+            <div class="ai-summary-grid">
+                <div class="ai-block">
+                    <h5>Treatment Time</h5>
+                    <p>1 - 2 Visits</p>
+                </div>
+                <div class="ai-block">
+                    <h5>Recovery Time</h5>
+                    <p>Immediate</p>
+                </div>
+                <div class="ai-block">
+                    <h5>Success Rate</h5>
+                    <p>99.2%</p>
+                </div>
+                <div class="ai-block">
+                    <h5>Avg. Cost in Kota</h5>
+                    <p>{{AvgCost}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Is the dental implant procedure painful? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>Not at all. We utilize advanced soft-tissue lasers and precise local anesthesia to ensure a completely painless experience. Most patients report feeling much less discomfort than a standard extraction.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long does a digital crown take? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>With our in-house 3D milling technology, we can design, create, and fit your custom digital crown in a single visit, saving you the hassle of wearing temporary crowns for weeks.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is the cost of a full smile makeover? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>Costs vary depending on the customized treatment plan. We recommend booking a consultation where we use our 3D CBCT scanners to provide you with a precise, transparent breakdown of your personalized treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <div class="wow-section" id="wowSection">
+          <div class="wow-left">
+           <video src="/apex-dental-sites/wow-video.mp4" autoplay loop muted playsinline style="width:100%;"></video>
+        </div>
+
+            <div class="wow-right">
+                <div class="wow-header">
+                    <h4>The Process</h4>
+                    <h2>The Science Behind Your Smile.</h2>
+                </div>
+                <div class="wow-steps-wrapper">
+                    <div class="wow-step">
+                        <h3>1. Titanium Base</h3>
+                        <p>A surgical-grade titanium implant is placed securely into the jawbone.</p>
+                    </div>
+                    <div class="wow-step">
+                        <h3>2. Custom Root</h3>
+                        <p>An abutment is attached to act as a solid, permanent foundation.</p>
+                    </div>
+                    <div class="wow-step">
+                        <h3>3. Perfect Crown</h3>
+                        <p>Your ultra-HD ceramic crown is placed for a flawless, natural look.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="premium-footer">
+            <div class="footer-bg-glow"></div>
+            <h2>Book your smile<br><i>transformation.</i></h2>
+            
+            <div class="magnetic-wrapper" id="magWrapper">
+                <a href="#" class="magnetic-btn" id="magBtn">Book Now</a>
+            </div>
+
+            <div class="seo-footer-grid">
+                <div class="seo-col">
+                    <h4>Top Services in Kota</h4>
+                    <ul>
+                        <li><a href="/dental-implants-in-{{CitySlug}}">Dental Implants</a></li>
+                        <li><a href="/root-canal-in-{{CitySlug}}">Painless Root Canal</a></li>
+                        <li><a href="/smile-makeover-in-{{CitySlug}}">Smile Makeovers</a></li>
+                        <li><a href="/clear-aligners-in-{{CitySlug}}">Clear Aligners</a></li>
+                    </ul>
+                </div>
+                <div class="seo-col">
+                    <h4>About Dr. Tooth Fairy</h4>
+                    <ul>
+                        <li><a href="/about-dr-{{DoctorSlug}}">Meet Dr. {{DoctorName}}</a></li>
+                        <li><a href="/reviews">Patient Reviews</a></li>
+                        <li><a href="/technology">Our Technology</a></li>
+                        <li><a href="/cost-and-financing">Cost & Financing</a></li>
+                    </ul>
+                </div>
+                <div class="seo-col">
+                    <h4>Find Us in Kota</h4>
+                    <div class="map-container">
+                        [ Google Map Embed for Dr. Tooth Fairy, Kota ]
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 Dr. Tooth Fairy Kota</div>
+                <div style="display:flex; gap: 30px;">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        const lenis = new Lenis({ lerp: 0.1, smoothWheel: true })
+        gsap.registerPlugin(ScrollTrigger);
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time)=>{ lenis.raf(time * 1000) });
+        gsap.ticker.lagSmoothing(0, 0);
+
+        lenis.stop();
+
+        window.addEventListener('load', () => {
+            gsap.to(".preloader-text", { y: 0, duration: 1, ease: "power3.out" });
+            
+            setTimeout(() => {
+                gsap.to(".preloader-text-wrapper", { opacity: 0, duration: 0.5 });
+                gsap.to(".preloader-top", { yPercent: -100, duration: 1.2, ease: "power4.inOut" });
+                gsap.to(".preloader-bottom", { yPercent: 100, duration: 1.2, ease: "power4.inOut", onComplete: () => {
+                    document.getElementById('preloader').style.display = 'none';
+                    lenis.start(); 
+                    ScrollTrigger.refresh(); 
+                }});
+            }, 1800); 
+        });
+
+        const splashCanvas = document.getElementById('splash-canvas');
+        const sctx = splashCanvas.getContext('2d');
+        let splats = [];
+        
+        function resizeSplash() { 
+            splashCanvas.width = window.innerWidth; 
+            splashCanvas.height = window.innerHeight; 
+        }
+        window.addEventListener('resize', resizeSplash); 
+        resizeSplash();
+        
+        const sColors = [
+            {r:212, g:175, b:55},  
+            {r:255, g:255, b:255}, 
+            {r:245, g:241, b:234}   
+        ];
+        
+        window.addEventListener('mousemove', (e) => {
+            if(window.innerWidth <= 768) return; // 🔥 Mobile par RAM save karne ke liye effect BAND 🔥
+            if(Math.random() > 0.3) {
+                splats.push({
+                    x: e.clientX, y: e.clientY,
+                    radius: Math.random() * 12 + 5,
+                    color: sColors[Math.floor(Math.random() * sColors.length)],
+                    life: 1,
+                    vx: (Math.random() - 0.5) * 3,
+                    vy: (Math.random() - 0.5) * 3
+                });
+            }
+        });
+
+        function drawSplats() {
+            sctx.clearRect(0, 0, splashCanvas.width, splashCanvas.height);
+            for(let i=0; i<splats.length; i++) {
+                let s = splats[i];
+                sctx.beginPath();
+                sctx.arc(s.x, s.y, s.radius, 0, Math.PI*2);
+                sctx.fillStyle = `rgba(${s.color.r}, ${s.color.g}, ${s.color.b}, ${s.life})`;
+                sctx.fill();
+                s.x += s.vx; s.y += s.vy;
+                s.life -= 0.02; 
+                s.radius += 0.3; 
+            }
+            splats = splats.filter(s => s.life > 0);
+            requestAnimationFrame(drawSplats);
+        }
+        drawSplats();
+
+        gsap.to(".hero-tooth", { 
+            yPercent: -100, opacity: 0, ease: "none",
+            scrollTrigger: { trigger: ".hero-fixed-container", start: "top top", end: "bottom top", scrub: true } 
+        });
+        gsap.to(".hero-screw", { 
+            yPercent: 100, opacity: 0, ease: "none",
+            scrollTrigger: { trigger: ".hero-fixed-container", start: "top top", end: "bottom top", scrub: true } 
+        });
+        gsap.to(".hero-fixed-container", {
+            scale: 0.85, opacity: 0.4, filter: "blur(8px)",  
+            scrollTrigger: { trigger: ".cards-stack-wrapper", start: "top bottom", end: "top top", scrub: true }
+        });
+
+        let panels = gsap.utils.toArray(".sticky-panel");
+        panels.forEach((panel, i) => {
+            if (i !== panels.length - 1) {
+                gsap.to(panel, {
+                    scale: 0.85, opacity: 0.4, filter: "blur(8px)",  
+                    scrollTrigger: { trigger: panels[i + 1], start: "top bottom", end: "top top", scrub: true }
+                });
+            }
+        });
+
+        // SERVICE 1 (🦷 Perfect Fit Fix 🦷)
+        gsap.set(".s1-root", { opacity: 1 });
+        gsap.to(".s1-cap", {
+            yPercent: 0, y: 0, opacity: 1, ease: "none",
+            scrollTrigger: { trigger: ".panel-1", start: "top center", end: "center center", scrub: true }
+        });
+
+        const canvas = document.getElementById("service2-canvas");
+        const context = canvas.getContext("2d", { alpha: true });
+        
+        canvas.width = 1000; 
+        canvas.height = 1000;
+        
+        const frameCount = 40; 
+        const images = [];
+        const framesObj = { frame: 9 };
+
+       // 🔥 FIX: Repo-Relative Path for Frames 🔥
+        for (let i = 1; i <= frameCount; i++) {
+            const img = new Image();
+            img.src = `/apex-dental-sites/frames/1 (1)/1 (${i}).png`; 
+            images.push(img);
+        }
+        
+        images[8].onload = () => {
+            context.drawImage(images[8], 0, 0, canvas.width, canvas.height);
+        };
+
+        function renderService2() {
+            requestAnimationFrame(() => {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                let idx = Math.round(framesObj.frame) - 1;
+                if(idx < 0) idx = 0;
+                if(idx > frameCount - 1) idx = frameCount - 1;
+                
+                if(images[idx] && images[idx].complete) { 
+                    context.drawImage(images[idx], 0, 0, canvas.width, canvas.height);
+                }
+            });
+        }
+
+        let s2Timeline = gsap.timeline({
+            scrollTrigger: { trigger: ".panel-2-wrapper", start: "top top", end: "bottom bottom", scrub: 1 },
+            onUpdate: renderService2 
+        });
+
+        s2Timeline.to(framesObj, { frame: 19, duration: 5, ease: "none" })
+                  .to(framesObj, { frame: frameCount, duration: 2, ease: "none" });
+
+        gsap.fromTo(".s3-implant", 
+            { opacity: 0, y: 150, scale: 0.8, rotation: -12 }, 
+            {
+                y: 0, scale: 1.1, opacity: 1, rotation: 6, ease: "none",
+                scrollTrigger: { 
+                    trigger: ".panel-3", start: "top top", end: "+=150vh", scrub: 1, pin: true         
+                }
+            }
+        );
+
+        const baContainer = document.getElementById('baContainer');
+        const baWrapper = document.getElementById('baWrapper');
+        const baHandle = document.getElementById('baHandle');
+        let isDragging = false;
+        
+        const moveSlider = (e) => {
+            if (!isDragging) return;
+            let clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            let rect = baContainer.getBoundingClientRect();
+            let x = clientX - rect.left;
+            let percentage = Math.max(0, Math.min(x / rect.width * 100, 100)); 
+            baWrapper.style.width = percentage + '%';
+            baHandle.style.left = percentage + '%';
+        }
+        
+        if(baContainer) {
+            baContainer.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', moveSlider);
+            baContainer.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', moveSlider);
+        }
+
+        const techCards = document.querySelectorAll('.tech-card');
+        techCards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -12; 
+                const rotateY = ((x - centerX) / centerX) * 12;
+                gsap.to(card, { rotateX: rotateX, rotateY: rotateY, duration: 0.4, ease: 'power2.out', transformPerspective: 1000 });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.7, ease: 'power2.out' });
+            });
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(faq => faq.classList.remove('active')); 
+                if (!isActive) item.classList.add('active'); 
+            });
+        });
+
+        const magWrapper = document.getElementById('magWrapper');
+        const magBtn = document.getElementById('magBtn');
+        if(magWrapper && magBtn) {
+            magWrapper.addEventListener('mousemove', (e) => {
+                const rect = magWrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(magBtn, { x: x * 0.5, y: y * 0.5, duration: 0.3, ease: 'power2.out' });
+            });
+            magWrapper.addEventListener('mouseleave', () => {
+                gsap.to(magBtn, { x: 0, y: 0, duration: 0.7, ease: 'elastic.out(1, 0.3)' });
+            });
+        }
+    </script>
+
+    <script type="module">
+        import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'https://esm.sh/ogl';
+
+        window.onerror = function(msg, url, line) {
+            document.getElementById('error-msg').style.display = 'block';
+            document.getElementById('error-msg').innerText = "Error: " + msg + "\nTip: Please run using a local server (like Live Server in VS Code) and not directly from file://";
+        };
+
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        function lerp(p1, p2, t) {
+            return p1 + (p2 - p1) * t;
+        }
+
+        function autoBind(instance) {
+            const proto = Object.getPrototypeOf(instance);
+            Object.getOwnPropertyNames(proto).forEach(key => {
+                if (key !== 'constructor' && typeof instance[key] === 'function') {
+                    instance[key] = instance[key].bind(instance);
+                }
+            });
+        }
+
+        function getFontSize(font) {
+            const match = font.match(/(\d+)px/);
+            return match ? parseInt(match[1], 10) : 30;
+        }
+
+        function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'black') {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            context.font = font;
+            const metrics = context.measureText(text);
+            const textWidth = Math.ceil(metrics.width);
+            const textHeight = Math.ceil(getFontSize(font) * 1.2);
+            canvas.width = textWidth + 20;
+            canvas.height = textHeight + 20;
+            context.font = font;
+            context.fillStyle = color;
+            context.textBaseline = 'middle';
+            context.textAlign = 'center';
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.fillText(text, canvas.width / 2, canvas.height / 2);
+            const texture = new Texture(gl, { generateMipmaps: false });
+            texture.image = canvas;
+            return { texture, width: canvas.width, height: canvas.height };
+        }
+
+        class Title {
+            constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }) {
+                autoBind(this);
+                this.gl = gl;
+                this.plane = plane;
+                this.renderer = renderer;
+                this.text = text;
+                this.textColor = textColor;
+                this.font = font;
+                this.createMesh();
+            }
+            createMesh() {
+                const { texture, width, height } = createTextTexture(this.gl, this.text, this.font, this.textColor);
+                const geometry = new Plane(this.gl);
+                const program = new Program(this.gl, {
+                    vertex: `
+                        attribute vec3 position;
+                        attribute vec2 uv;
+                        uniform mat4 modelViewMatrix;
+                        uniform mat4 projectionMatrix;
+                        varying vec2 vUv;
+                        void main() {
+                            vUv = uv;
+                            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                        }
+                    `,
+                    fragment: `
+                        precision highp float;
+                        uniform sampler2D tMap;
+                        varying vec2 vUv;
+                        void main() {
+                            vec4 color = texture2D(tMap, vUv);
+                            if (color.a < 0.1) discard;
+                            gl_FragColor = color;
+                        }
+                    `,
+                    uniforms: { tMap: { value: texture } },
+                    transparent: true
+                });
+                this.mesh = new Mesh(this.gl, { geometry, program });
+                const aspect = width / height;
+                const textHeight = this.plane.scale.y * 0.15;
+                const textWidth = textHeight * aspect;
+                this.mesh.scale.set(textWidth, textHeight, 1);
+                this.mesh.position.y = -this.plane.scale.y * 0.5 - textHeight * 0.5 - 0.05;
+                this.mesh.setParent(this.plane);
+            }
+        }
+
+        class Media {
+            constructor({ geometry, gl, image, index, length, renderer, scene, screen, text, viewport, bend, textColor, borderRadius = 0, font }) {
+                this.extra = 0;
+                this.geometry = geometry;
+                this.gl = gl;
+                this.image = image;
+                this.index = index;
+                this.length = length;
+                this.renderer = renderer;
+                this.scene = scene;
+                this.screen = screen;
+                this.text = text;
+                this.viewport = viewport;
+                this.bend = bend;
+                this.textColor = textColor;
+                this.borderRadius = borderRadius;
+                this.font = font;
+                this.createShader();
+                this.createMesh();
+                this.createTitle();
+                this.onResize();
+            }
+            createShader() {
+                const texture = new Texture(this.gl, { generateMipmaps: true });
+                this.program = new Program(this.gl, {
+                    depthTest: false,
+                    depthWrite: false,
+                    vertex: `
+                        precision highp float;
+                        attribute vec3 position;
+                        attribute vec2 uv;
+                        uniform mat4 modelViewMatrix;
+                        uniform mat4 projectionMatrix;
+                        uniform float uTime;
+                        uniform float uSpeed;
+                        varying vec2 vUv;
+                        void main() {
+                            vUv = uv;
+                            vec3 p = position;
+                            p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * (0.1 + uSpeed * 0.5);
+                            gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
+                        }
+                    `,
+                    fragment: `
+                        precision highp float;
+                        uniform vec2 uImageSizes;
+                        uniform vec2 uPlaneSizes;
+                        uniform sampler2D tMap;
+                        uniform float uBorderRadius;
+                        varying vec2 vUv;
+                        
+                        float roundedBoxSDF(vec2 p, vec2 b, float r) {
+                            vec2 d = abs(p) - b;
+                            return length(max(d, vec2(0.0))) + min(max(d.x, d.y), 0.0) - r;
+                        }
+                        
+                        void main() {
+                            vec2 ratio = vec2(
+                                min((uPlaneSizes.x / uPlaneSizes.y) / (uImageSizes.x / uImageSizes.y), 1.0),
+                                min((uPlaneSizes.y / uPlaneSizes.x) / (uImageSizes.y / uImageSizes.x), 1.0)
+                            );
+                            vec2 uv = vec2(
+                                vUv.x * ratio.x + (1.0 - ratio.x) * 0.5,
+                                vUv.y * ratio.y + (1.0 - ratio.y) * 0.5
+                            );
+                            vec4 color = texture2D(tMap, uv);
+                            
+                            float d = roundedBoxSDF(vUv - 0.5, vec2(0.5 - uBorderRadius), uBorderRadius);
+                            float edgeSmooth = 0.002;
+                            float alpha = 1.0 - smoothstep(-edgeSmooth, edgeSmooth, d);
+                            
+                            gl_FragColor = vec4(color.rgb, alpha);
+                        }
+                    `,
+                    uniforms: {
+                        tMap: { value: texture },
+                        uPlaneSizes: { value: [0, 0] },
+                        uImageSizes: { value: [0, 0] },
+                        uSpeed: { value: 0 },
+                        uTime: { value: 100 * Math.random() },
+                        uBorderRadius: { value: this.borderRadius }
+                    },
+                    transparent: true
+                });
+                
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.onload = () => {
+                    texture.image = img;
+                    this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
+                };
+                img.onerror = () => {
+                    const dummyCanvas = document.createElement('canvas');
+                    dummyCanvas.width = 800;
+                    dummyCanvas.height = 600;
+                    const ctx = dummyCanvas.getContext('2d');
+                    ctx.fillStyle = '#333';
+                    ctx.fillRect(0,0,800,600);
+                    texture.image = dummyCanvas;
+                    this.program.uniforms.uImageSizes.value = [800, 600];
+                };
+                img.src = this.image;
+            }
+            createMesh() {
+                this.plane = new Mesh(this.gl, { geometry: this.geometry, program: this.program });
+                this.plane.setParent(this.scene);
+            }
+            createTitle() {
+                this.title = new Title({
+                    gl: this.gl, plane: this.plane, renderer: this.renderer,
+                    text: this.text, textColor: this.textColor, font: this.font
+                });
+            }
+            update(scroll, direction) {
+                this.plane.position.x = this.x - scroll.current - this.extra;
+                const x = this.plane.position.x;
+                const H = this.viewport.width / 2;
+
+                if (this.bend === 0) {
+                    this.plane.position.y = 0;
+                    this.plane.rotation.z = 0;
+                } else {
+                    const B_abs = Math.abs(this.bend);
+                    const R = (H * H + B_abs * B_abs) / (2 * B_abs);
+                    const effectiveX = Math.min(Math.abs(x), H);
+
+                    const arc = R - Math.sqrt(R * R - effectiveX * effectiveX);
+                    if (this.bend > 0) {
+                        this.plane.position.y = -arc;
+                        this.plane.rotation.z = -Math.sign(x) * Math.asin(effectiveX / R);
+                    } else {
+                        this.plane.position.y = arc;
+                        this.plane.rotation.z = Math.sign(x) * Math.asin(effectiveX / R);
+                    }
+                }
+
+                this.speed = scroll.current - scroll.last;
+                this.program.uniforms.uTime.value += 0.04;
+                this.program.uniforms.uSpeed.value = this.speed;
+
+                const planeOffset = this.plane.scale.x / 2;
+                const viewportOffset = this.viewport.width / 2;
+                this.isBefore = this.plane.position.x + planeOffset < -viewportOffset;
+                this.isAfter = this.plane.position.x - planeOffset > viewportOffset;
+                
+                if (direction === 'right' && this.isBefore) {
+                    this.extra -= this.widthTotal;
+                    this.isBefore = this.isAfter = false;
+                }
+                if (direction === 'left' && this.isAfter) {
+                    this.extra += this.widthTotal;
+                    this.isBefore = this.isAfter = false;
+                }
+            }
+            onResize({ screen, viewport } = {}) {
+                if (screen) this.screen = screen;
+                if (viewport) {
+                    this.viewport = viewport;
+                    if (this.plane.program.uniforms.uViewportSizes) {
+                        this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height];
+                    }
+                }
+                this.scale = this.screen.height / 1500;
+                this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
+                this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+                this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
+                this.padding = 2;
+                this.width = this.plane.scale.x + this.padding;
+                this.widthTotal = this.width * this.length;
+                this.x = this.width * this.index;
+            }
+        }
+
+        class App {
+            constructor(container, { items, bend, textColor = '#ffffff', borderRadius = 0, font = 'bold 30px Figtree', scrollSpeed = 2, scrollEase = 0.05 } = {}) {
+                this.container = container;
+                this.scrollSpeed = scrollSpeed;
+                this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
+                this.onCheckDebounce = debounce(this.onCheck.bind(this), 200);
+                this.createRenderer();
+                this.createCamera();
+                this.createScene();
+                this.onResize();
+                this.createGeometry();
+                this.createMedias(items, bend, textColor, borderRadius, font);
+                this.update();
+                this.addEventListeners();
+            }
+            createRenderer() {
+                this.renderer = new Renderer({ alpha: true, antialias: true, dpr: Math.min(window.devicePixelRatio || 1, 2) });
+                this.gl = this.renderer.gl;
+                this.gl.clearColor(0, 0, 0, 0);
+                this.container.appendChild(this.gl.canvas);
+            }
+            createCamera() {
+                this.camera = new Camera(this.gl);
+                this.camera.fov = 45;
+                this.camera.position.z = 20;
+            }
+            createScene() {
+                this.scene = new Transform();
+            }
+            createGeometry() {
+                this.planeGeometry = new Plane(this.gl, { heightSegments: 50, widthSegments: 100 });
+            }
+            createMedias(items, bend = 1, textColor, borderRadius, font) {
+                const galleryItems = items;
+                this.mediasImages = galleryItems.concat(galleryItems);
+                this.medias = this.mediasImages.map((data, index) => {
+                    return new Media({
+                        geometry: this.planeGeometry, gl: this.gl, image: data.image, index, length: this.mediasImages.length,
+                        renderer: this.renderer, scene: this.scene, screen: this.screen, text: data.text, viewport: this.viewport,
+                        bend, textColor, borderRadius, font
+                    });
+                });
+            }
+            onTouchDown(e) {
+                this.isDown = true;
+                this.scroll.position = this.scroll.current;
+                this.start = e.touches ? e.touches[0].clientX : e.clientX;
+            }
+            onTouchMove(e) {
+                if (!this.isDown) return;
+                const x = e.touches ? e.touches[0].clientX : e.clientX;
+                const distance = (this.start - x) * (this.scrollSpeed * 0.025);
+                this.scroll.target = this.scroll.position + distance;
+            }
+            onTouchUp() {
+                this.isDown = false;
+                this.onCheck();
+            }
+            onWheel(e) {
+                const delta = e.deltaY || e.wheelDelta || e.detail;
+                this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
+                this.onCheckDebounce();
+            }
+            onKeyDown(e) {
+                switch (e.key) {
+                    case 'ArrowRight': e.preventDefault(); this.scroll.target += this.scrollSpeed * 5; this.onCheckDebounce(); break;
+                    case 'ArrowLeft': e.preventDefault(); this.scroll.target -= this.scrollSpeed * 5; this.onCheckDebounce(); break;
+                    case 'Home': e.preventDefault(); this.scroll.target = 0; this.onCheckDebounce(); break;
+                }
+            }
+            onCheck() {
+                if (!this.medias || !this.medias[0]) return;
+                const width = this.medias[0].width;
+                const itemIndex = Math.round(Math.abs(this.scroll.target) / width);
+                const item = width * itemIndex;
+                this.scroll.target = this.scroll.target < 0 ? -item : item;
+            }
+            onResize() {
+                this.screen = { width: this.container.clientWidth, height: this.container.clientHeight };
+                this.renderer.setSize(this.screen.width, this.screen.height);
+                this.camera.perspective({ aspect: this.screen.width / this.screen.height });
+                const fov = (this.camera.fov * Math.PI) / 180;
+                const height = 2 * Math.tan(fov / 2) * this.camera.position.z;
+                const width = height * this.camera.aspect;
+                this.viewport = { width, height };
+                if (this.medias) {
+                    this.medias.forEach(media => media.onResize({ screen: this.screen, viewport: this.viewport }));
+                }
+            }
+            update() {
+                this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
+                const direction = this.scroll.current > this.scroll.last ? 'right' : 'left';
+                if (this.medias) {
+                    this.medias.forEach(media => media.update(this.scroll, direction));
+                }
+                this.renderer.render({ scene: this.scene, camera: this.camera });
+                this.scroll.last = this.scroll.current;
+                this.raf = window.requestAnimationFrame(this.update.bind(this));
+            }
+            addEventListeners() {
+                this.boundOnResize = this.onResize.bind(this);
+                this.boundOnWheel = this.onWheel.bind(this);
+                this.boundOnTouchDown = this.onTouchDown.bind(this);
+                this.boundOnTouchMove = this.onTouchMove.bind(this);
+                this.boundOnTouchUp = this.onTouchUp.bind(this);
+                this.boundOnKeyDown = this.onKeyDown.bind(this);
+
+                window.addEventListener('resize', this.boundOnResize);
+                this.container.addEventListener('wheel', this.boundOnWheel, { passive: true });
+                this.container.addEventListener('mousedown', this.boundOnTouchDown);
+                window.addEventListener('mousemove', this.boundOnTouchMove);
+                window.addEventListener('mouseup', this.boundOnTouchUp);
+                this.container.addEventListener('touchstart', this.boundOnTouchDown, { passive: true });
+                window.addEventListener('touchmove', this.boundOnTouchMove, { passive: true });
+                window.addEventListener('touchend', this.boundOnTouchUp);
+                this.container?.addEventListener('keydown', this.boundOnKeyDown);
+            }
+        }
+
+        document.fonts.ready.then(() => {
+            const container = document.getElementById('gallery');
+            if(!container) return; // Prevent error on mobile if container is missing
+            
+            const clinicItems = [
+                { image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000', text: 'The Lounge' },
+                { image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000', text: 'Operating Suite' },
+                { image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000', text: 'Private Recovery' },
+                { image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000', text: 'Waiting Area' },
+                { image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000', text: 'Sterilization' }
+            ];
+
+            const app = new App(container, {
+                items: clinicItems,
+                bend: 3,                 
+                textColor: '#D4AF37',    
+                borderRadius: 0.05,      
+                font: '500 30px Playfair Display', 
+                scrollSpeed: 2,          
+                scrollEase: 0.05         
+            });
+        });
+    </script>
+</body>
+</html>
